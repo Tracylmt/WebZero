@@ -17,7 +17,7 @@ RUN yum install which wget git -y \
 ADD ./ /root/ruby_dir/
 WORKDIR /root/ruby_dir/
 RUN bundle install \
+    && RAILS_ENV=production bundle exec rake db:migrate \
     && bundle exec rake assets:precompile
-ENTRYPOINT bundle exec rake db:migrate RAILS_ENV=production 
 EXPOSE 3000
 CMD RAILS_ENV=production bundle exec puma -C config/puma.rb --port $PORT
