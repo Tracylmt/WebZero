@@ -14,8 +14,9 @@ RUN yum install which wget git -y \
     && rbenv install 3.0.2 \
     && rbenv global 3.0.2 \
     && gem install rails
-COPY ./ /root/ruby_dir/
+ADD ./ /root/ruby_dir/
 WORKDIR /root/ruby_dir/
-RUN bundle install
+RUN bundle install \
+    && bundle exec rake assets:precompile
 EXPOSE 3000
-ENTRYPOINT ["rails", "s","-b","0.0.0.0","--port","3000"]
+CMD RAILS_ENV=production bundle exec puma -C config/puma.rb --port $PORT
