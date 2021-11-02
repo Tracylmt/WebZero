@@ -2,8 +2,8 @@
 
 <h1>Websites</h1>
 
-<table>
-  <thead>
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
     <tr>
       <th>Website address</th>
       <th>Username</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= website.website_address %></td>
         <td><%= website.username %></td>
-        <td><%= link_to 'Show', website %></td>
-        <td><%= link_to 'Edit', edit_website_path(website) %></td>
-        <td><%= link_to 'Destroy', website, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%# <td><%= link_to 'Show', website %1></td> %>
+        <%# <td><%= link_to 'Edit', edit_website_path(website) %1></td> %>
+        <%# <td><%= link_to 'Destroy', website, method: :delete, data: { confirm: 'Are you sure?' } %1></td> %>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Website', new_website_path %>
+<%# <%= link_to 'New Website', new_website_path %1> %>
