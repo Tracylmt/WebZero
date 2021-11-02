@@ -1,0 +1,20 @@
+<h3>You need to upload your resume or file that contains your personal info, WebZero will parse it automatically and generate your website!</h3>
+<br/>
+<br/>
+<br/>
+<br/>
+<%= link_to "See some existing WebZero Build Websites", websites_path %>
+<%= form_with model: @article do |form| %>
+  <div class="form-group">
+    <label for="upload">Upload your resume/other basic info here</label>
+    <br/>
+    <input class="form-control form-control-lg" id="formFileLg" type="file">
+  </div>
+<br/>
+<br/>
+<br/>
+  <div>
+     <%# <input type="submit" value="submit" id="submit" /> %>
+     <button type="button" class="btn btn-light">Generate</button>
+  </div>
+<% end %>

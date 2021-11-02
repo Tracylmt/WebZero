@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Website address:</strong>
+  <%= @website.website_address %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @website.username %>
+</p>
+
+<%= link_to 'Edit', edit_website_path(@website) %> |
+<%= link_to 'Back', websites_path %>
