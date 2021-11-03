@@ -19,7 +19,11 @@
         </li>
         <% else %>
         <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
+          <% if !user_signed_in? %>
+            <%= link_to "Login", user_session_path, :class => "nav-link" %>
+          <% else %>
+            <%= link_to "Profile", home_profile_path, :class => "nav-link" %>
+          <% end %>
         </li>
         <% end %>
       </ul>

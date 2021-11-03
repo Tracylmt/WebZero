@@ -1,0 +1,45 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field", class:"btn btn-light">
+    <%= form.label :resume %>
+    <%= form.file_field :resume %>
+  </div>
+
+  <div class="actions">
+    <br/>
+    <br/>
+    <br/>
+    <%= form.submit "Upload Resume", class:"btn btn-light" %>
+  </div>
+
+
+<%# <%= form_with model: @user do |form| %1> %>
+<%#   <div class="form-group"> %>
+<%#     <label for="upload">Upload your resume/other basic info here</label> %>
+<%#     <br/> %>
+<%#     <input name="user[resume]", class="form-control form-control-lg" id="formFileLg" type="file"> %>
+<%#   </div> %>
+<%# <br/> %>
+<%# <br/> %>
+<%# <br/> %>
+<%#   <div> %>
+<%#      <%= form.submit "Generate", class:"btn btn-light" %1> %>
+<%#   </div> %>
+<%# <% end %1> %>
+
+
+
+
+
+<% end %>
