@@ -1,5 +1,5 @@
 <h1 class="display-4">Hello <%= current_user.email %></h1>
-<h1 class="display-4">This is your uploaded resume: <%= current_user.resume.file==nil %></h1>
+<%# <h1 class="display-4">This is your uploaded resume: <%= current_user.resume.file==nil %1></h1> %>
 <h3>You need to upload your resume or file that contains your personal info, WebZero will parse it automatically and generate your website!</h3>
 <div class="jumbotron">
 <br/>
@@ -15,25 +15,10 @@
   <%= render 'file', user: current_user %>
   <% end %>
 </div>
-  <%# <% if user_signed_in? %1> %>
-<%# <%= form_with model: @user do |form| %1> %>
-  <%# <div class="form-group"> %>
-  <%#   <label for="upload">Upload your resume/other basic info here</label> %>
-  <%#   <br/> %>
-  <%#   <input class="form-control form-control-lg" id="formFileLg" type="file"> %>
-  <%# </div> %>
-<%# <br/> %>
-<%# <br/> %>
-<%# <br/> %>
-  <%# <div> %>
-  <%#    <%= form.submit "Generate", class:"btn btn-light" %1> %>
-  <%# </div> %>
-<%# <% end %1> %>
-  <%# <% end %1> %>
 <% if current_user.resume.file !=nil %>
 <% g_res = generate(path="public#{current_user.resume}") %>
 <% if g_res %>
-  <h1><%= g_res %></h1>
+  <h1>Website genereated successfully! This is your website location: <%= g_res %></h1>
 <% end %>
 <% end %>
 </div>
