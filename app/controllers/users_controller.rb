@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  def index
-    @users = User.all
-    # @user = current_user
+  # def index
+  #   @users = User.all
+  #   # @user = current_user
 
-  end
+  # end
   def update
     @user = current_user    
     respond_to do |format|
@@ -17,19 +17,19 @@ class UsersController < ApplicationController
     # redirect_to root_path
   end
 
-  def new
-    @user = User.new
-  end
+  # def new
+  #   @user = User.new
+  # end
 
 
-  def show
+  # def show
 
-    # if user_signed_in?
-    #   redirect_to root_path
-    # else
-    #   redirect_to new_user_session_path
-    # end
-  end
+  #   # if user_signed_in?
+  #   #   redirect_to root_path
+  #   # else
+  #   #   redirect_to new_user_session_path
+  #   # end
+  # end
 
 
   def user_params
