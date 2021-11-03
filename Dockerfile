@@ -18,6 +18,6 @@ ADD ./ /root/ruby_dir/
 WORKDIR /root/ruby_dir/
 RUN bundle install \
     && bundle exec rake assets:precompile
-RUN RAILS_ENV=production bundle exec rake db:migrate
+# RUN RAILS_ENV=production bundle exec rake db:migrate
 EXPOSE 3000
 CMD RAILS_ENV=production bundle exec puma -C config/puma.rb --port $PORT
