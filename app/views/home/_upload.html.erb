@@ -1,4 +1,5 @@
 <h1 class="display-4">Hello <%= current_user.email %></h1>
+<h1 class="display-4">This is your uploaded resume: <%= current_user.resume.file==nil %></h1>
 <h3>You need to upload your resume or file that contains your personal info, WebZero will parse it automatically and generate your website!</h3>
 <div class="jumbotron">
 <br/>
@@ -29,4 +30,10 @@
   <%# </div> %>
 <%# <% end %1> %>
   <%# <% end %1> %>
+<% if current_user.resume.file !=nil %>
+<% g_res = generate(path="public#{current_user.resume}") %>
+<% if g_res %>
+  <h1><%= g_res %></h1>
+<% end %>
+<% end %>
 </div>
