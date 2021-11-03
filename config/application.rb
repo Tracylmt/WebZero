@@ -18,5 +18,6 @@ module Blog
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    Rails.autoloaders.main.ignore(Rails.root.join('app/helpers/functions/web_resume/template_0/lib/font-awesome'))
   end
 end
