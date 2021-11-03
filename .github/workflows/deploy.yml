@@ -16,3 +16,10 @@ jobs:
           heroku_app_name: "webzero" #Must be unique in Heroku
           heroku_email: ${{secrets.EMAIL}}
           usedocker: true
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "webzero"
+          heroku_email: ${{secrets.EMAIL}}
+          justlogin: true
+      - run: heroku run rake db:migrate

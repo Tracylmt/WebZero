@@ -22,9 +22,9 @@ test:
 
 production:
   adapter: postgresql
-  database: webzero
   pool: 5
-  username: postgres
-  <%# password: %>
-  host: localhost
+  database: webzero
+  username: webzero
+  password: webzero
+  <%# host: localhost %>
   timeout: 5000
