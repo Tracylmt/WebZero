@@ -2,8 +2,8 @@ require 'aws-sdk'
 
 module Functions::WebResume::Deploy2S3
   # Tracy's s3 secrets
-  AWS_ACCESS_KEY_ID = 'AKIAYNNU7IGCGQDMBRUE'
-  AWS_SECRET_ACCESS_KEY = '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'
+  AWS_ACCESS_KEY_ID = '***'
+  AWS_SECRET_ACCESS_KEY = '***/sz8I'
   REGION_ID = 'us-east-1'
   BUCKET_NAME = 'webzero-test'
   # Lists the available Amazon S3 buckets.
